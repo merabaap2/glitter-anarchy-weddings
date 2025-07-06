@@ -5,15 +5,8 @@ import heroImage from "@/assets/hero-wedding.jpg";
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-      {/* Background Image with Elegant Overlay */}
-      <div className="absolute inset-0">
-        <img 
-          src={heroImage} 
-          alt="Luxury Wedding Ceremony" 
-          className="w-full h-full object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-luxury-cream/80" />
-      </div>
+      {/* Clean Background with Subtle Pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-luxury-blush/20 to-luxury-cream/40" />
       
       {/* Floating Sparkle Effects */}
       <div className="absolute inset-0 pointer-events-none">
@@ -21,6 +14,8 @@ const Hero = () => {
         <Star className="absolute top-32 right-20 w-4 h-4 text-primary floating opacity-30" style={{animationDelay: '1s'}} />
         <Sparkles className="absolute bottom-40 left-20 w-5 h-5 text-primary floating opacity-35" style={{animationDelay: '2s'}} />
         <Star className="absolute bottom-60 right-10 w-6 h-6 text-primary floating opacity-25" style={{animationDelay: '0.5s'}} />
+        <Sparkles className="absolute top-1/2 left-1/4 w-4 h-4 text-primary floating opacity-20" style={{animationDelay: '3s'}} />
+        <Star className="absolute top-1/3 right-1/3 w-5 h-5 text-primary floating opacity-30" style={{animationDelay: '1.5s'}} />
       </div>
       
       {/* Content */}
