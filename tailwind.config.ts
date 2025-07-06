@@ -61,7 +61,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				luxury: {
+					gold: 'hsl(var(--luxury-gold))',
+					maroon: 'hsl(var(--background))',
+					sparkle: 'hsl(var(--sparkle-white))',
+					silver: 'hsl(var(--silver-glitter))'
 				}
+			},
+			backgroundImage: {
+				'gradient-maroon': 'var(--gradient-maroon)',
+				'gradient-sparkle': 'var(--gradient-sparkle)'
+			},
+			boxShadow: {
+				'luxury': 'var(--shadow-luxury)',
+				'sparkle': 'var(--shadow-sparkle)',
+				'glow': 'var(--shadow-glow)'
+			},
+			transitionDuration: {
+				'luxury': 'var(--transition-luxury)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
