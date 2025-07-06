@@ -2,58 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Wishupon Wedding Events - Luxury Design System 
+/* Wishupon Wedding Events - Sophisticated Light Design System 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Deep Maroon Theme */
-    --background: 358 68% 24%; /* Deep Maroon #6F161A */
-    --foreground: 0 0% 84%; /* Glitter Silver #D5D5D5 */
+    /* Elegant Light Theme with Maroon Accents */
+    --background: 25 40% 97%; /* Warm Ivory */
+    --foreground: 358 45% 15%; /* Deep Charcoal */
 
-    --card: 358 65% 20%;
-    --card-foreground: 0 0% 84%;
+    --card: 0 0% 100%; /* Pure White */
+    --card-foreground: 358 45% 15%;
 
-    --popover: 358 68% 24%;
-    --popover-foreground: 0 0% 84%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 358 45% 15%;
 
-    --primary: 358 68% 30%; /* Lighter maroon for buttons */
-    --primary-foreground: 0 0% 100%; /* White Sparkle */
+    --primary: 358 68% 45%; /* Rich Maroon - less intense */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 84%; /* Glitter Silver */
-    --secondary-foreground: 358 68% 24%;
+    --secondary: 25 30% 92%; /* Soft Cream */
+    --secondary-foreground: 358 45% 15%;
 
-    --muted: 358 50% 30%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 25 20% 90%; /* Light Warm Grey */
+    --muted-foreground: 358 15% 45%;
 
-    --accent: 0 0% 100%; /* White Sparkle for highlights */
-    --accent-foreground: 358 68% 24%;
+    --accent: 358 68% 45%; /* Maroon Accent */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 358 40% 35%;
-    --input: 358 40% 30%;
-    --ring: 0 0% 100%;
+    --border: 25 20% 85%; /* Soft Border */
+    --input: 25 25% 88%;
+    --ring: 358 68% 45%;
 
-    /* Custom Wedding Colors */
+    /* Custom Luxury Colors */
     --luxury-gold: 45 85% 65%;
     --sparkle-white: 0 0% 100%;
-    --silver-glitter: 0 0% 84%;
+    --silver-glitter: 0 0% 75%;
+    --warm-cream: 25 40% 95%;
+    --soft-blush: 358 30% 95%;
     
-    /* Gradients */
-    --gradient-maroon: linear-gradient(135deg, hsl(358 68% 24%), hsl(358 60% 30%));
-    --gradient-sparkle: linear-gradient(45deg, hsl(0 0% 100% / 0.1), hsl(0 0% 100% / 0.3));
+    /* Sophisticated Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(25 40% 97%) 0%, hsl(358 20% 92%) 50%, hsl(25 30% 90%) 100%);
+    --gradient-maroon: linear-gradient(135deg, hsl(358 68% 45%), hsl(358 60% 50%));
+    --gradient-luxury: linear-gradient(135deg, hsl(45 85% 65% / 0.1), hsl(358 68% 45% / 0.1));
+    --gradient-sparkle: linear-gradient(45deg, hsl(0 0% 100% / 0.8), hsl(358 30% 95% / 0.6));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(25 30% 98%));
     
-    /* Shadows & Effects */
-    --shadow-luxury: 0 20px 40px hsl(358 68% 10% / 0.4);
-    --shadow-sparkle: 0 0 20px hsl(0 0% 100% / 0.3);
-    --shadow-glow: 0 0 30px hsl(358 68% 50% / 0.5);
+    /* Refined Shadows & Effects */
+    --shadow-soft: 0 4px 20px hsl(358 68% 45% / 0.08);
+    --shadow-luxury: 0 10px 40px hsl(358 68% 45% / 0.12);
+    --shadow-sparkle: 0 0 30px hsl(358 68% 45% / 0.15);
+    --shadow-glow: 0 0 40px hsl(358 68% 45% / 0.2);
+    --shadow-elegant: 0 8px 32px hsl(358 20% 20% / 0.1);
     
-    /* Animations */
-    --transition-luxury: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --sparkle-duration: 2s;
+    /* Smooth Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-luxury: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --sparkle-duration: 3s;
 
     --radius: 0.75rem;
 
@@ -75,41 +83,41 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Elegant Dark Mode with Maroon Accents */
+    --background: 358 25% 8%; /* Deep Charcoal with Maroon undertone */
+    --foreground: 25 20% 90%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 358 20% 12%;
+    --card-foreground: 25 20% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 358 20% 12%;
+    --popover-foreground: 25 20% 90%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 358 68% 55%; /* Brighter maroon for dark mode */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 358 15% 18%;
+    --secondary-foreground: 25 20% 90%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 358 10% 20%;
+    --muted-foreground: 25 10% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 358 68% 55%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 358 15% 25%;
+    --input: 358 15% 22%;
+    --ring: 358 68% 55%;
+    
+    /* Dark Mode Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(358 25% 8%) 0%, hsl(358 20% 12%) 50%, hsl(358 15% 15%) 100%);
+    --gradient-maroon: linear-gradient(135deg, hsl(358 68% 55%), hsl(358 60% 60%));
+    --gradient-luxury: linear-gradient(135deg, hsl(45 85% 65% / 0.1), hsl(358 68% 55% / 0.1));
+    --gradient-sparkle: linear-gradient(45deg, hsl(0 0% 100% / 0.1), hsl(358 30% 20% / 0.8));
+    --gradient-card: linear-gradient(145deg, hsl(358 20% 12%), hsl(358 15% 15%));
   }
 }
 
@@ -119,6 +127,55 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
   }
+  
+  /* Elegant animations and effects */
+  .sparkle-text {
+    background: linear-gradient(
+      45deg,
+      hsl(var(--foreground)),
+      hsl(var(--accent)),
+      hsl(var(--foreground))
+    );
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: sparkle 3s ease-in-out infinite;
+  }
+  
+  @keyframes sparkle {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
 }

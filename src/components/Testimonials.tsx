@@ -28,45 +28,45 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-primary/5 to-background">
+    <section className="py-20 bg-gradient-to-b from-luxury-cream/40 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <Heart className="w-8 h-8 text-accent" />
+            <Heart className="w-8 h-8 text-primary floating" />
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">What Our Clients Say</h2>
-            <Heart className="w-8 h-8 text-accent" />
+            <Heart className="w-8 h-8 text-primary floating" style={{animationDelay: '1s'}} />
           </div>
-          <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/70 max-w-2xl mx-auto font-light">
             Hear from our happy clients who trusted us with their special moments
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="relative shadow-luxury border-accent/20 bg-gradient-to-b from-card to-card/80 hover:shadow-glow transition-all duration-300">
-              <Quote className="absolute top-4 right-4 w-8 h-8 text-accent/30" />
+            <Card key={index} className="relative shadow-elegant border-primary/10 bg-gradient-card hover:shadow-luxury transition-all duration-300 hover:scale-105">
+              <Quote className="absolute top-4 right-4 w-8 h-8 text-primary/20" />
               
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-accent" fill="currentColor" />
+                    <Star key={i} className="w-5 h-5 text-primary" fill="currentColor" />
                   ))}
                 </div>
                 
-                <p className="text-foreground/90 mb-6 leading-relaxed italic">
+                <p className="text-foreground/80 mb-6 leading-relaxed italic">
                   "{testimonial.text}"
                 </p>
                 
                 <div className="flex items-center gap-3">
-                  <Avatar className="w-12 h-12 border-2 border-accent/30">
+                  <Avatar className="w-12 h-12 border-2 border-primary/20">
                     <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                    <AvatarFallback className="bg-accent/20 text-foreground">
+                    <AvatarFallback className="bg-primary/10 text-foreground">
                       {testimonial.name.split(' ').map(n => n[0]).join('')}
                     </AvatarFallback>
                   </Avatar>
                   <div>
                     <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                    <p className="text-sm text-foreground/70">{testimonial.role}</p>
+                    <p className="text-sm text-foreground/60">{testimonial.role}</p>
                   </div>
                 </div>
               </CardContent>

@@ -64,21 +64,34 @@ export default {
 				},
 				luxury: {
 					gold: 'hsl(var(--luxury-gold))',
-					maroon: 'hsl(var(--background))',
+					maroon: 'hsl(var(--accent))',
 					sparkle: 'hsl(var(--sparkle-white))',
-					silver: 'hsl(var(--silver-glitter))'
+					silver: 'hsl(var(--silver-glitter))',
+					cream: 'hsl(var(--warm-cream))',
+					blush: 'hsl(var(--soft-blush))'
 				}
 			},
 			backgroundImage: {
+				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-maroon': 'var(--gradient-maroon)',
-				'gradient-sparkle': 'var(--gradient-sparkle)'
+				'gradient-luxury': 'var(--gradient-luxury)',
+				'gradient-sparkle': 'var(--gradient-sparkle)',
+				'gradient-card': 'var(--gradient-card)'
 			},
 			boxShadow: {
+				'soft': 'var(--shadow-soft)',
 				'luxury': 'var(--shadow-luxury)',
 				'sparkle': 'var(--shadow-sparkle)',
-				'glow': 'var(--shadow-glow)'
+				'glow': 'var(--shadow-glow)',
+				'elegant': 'var(--shadow-elegant)'
+			},
+			animation: {
+				'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+				'sparkle': 'sparkle 3s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite'
 			},
 			transitionDuration: {
+				'smooth': 'var(--transition-smooth)',
 				'luxury': 'var(--transition-luxury)'
 			},
 			borderRadius: {

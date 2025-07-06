@@ -42,15 +42,15 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-gradient-to-b from-muted/20 to-background">
+    <section id="portfolio" className="py-20 bg-gradient-to-b from-luxury-blush/20 to-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <Camera className="w-8 h-8 text-accent" />
+            <Camera className="w-8 h-8 text-primary floating" />
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">Our Portfolio</h2>
-            <Camera className="w-8 h-8 text-accent" />
+            <Camera className="w-8 h-8 text-primary floating" style={{animationDelay: '1s'}} />
           </div>
-          <p className="text-xl text-foreground/80 max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-foreground/70 max-w-2xl mx-auto mb-8 font-light">
             Browse through our collection of beautiful wedding moments
           </p>
           
@@ -60,10 +60,10 @@ const Portfolio = () => {
               <Badge 
                 key={index} 
                 variant={category.active ? "default" : "outline"}
-                className={`px-6 py-2 text-sm cursor-pointer transition-all hover:shadow-sparkle ${
+                className={`px-6 py-2 text-sm cursor-pointer transition-all hover:shadow-soft ${
                   category.active 
-                    ? 'bg-accent text-primary shadow-glow' 
-                    : 'border-accent/40 text-foreground hover:bg-accent/10'
+                    ? 'bg-primary text-white shadow-soft hover:shadow-glow' 
+                    : 'border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary/50'
                 }`}
               >
                 {category.name}
@@ -77,7 +77,7 @@ const Portfolio = () => {
           {portfolioItems.map((item, index) => (
             <div 
               key={index} 
-              className="group relative overflow-hidden rounded-lg shadow-luxury hover:shadow-glow transition-all duration-500 cursor-pointer"
+              className="group relative overflow-hidden rounded-lg shadow-soft hover:shadow-luxury transition-all duration-500 cursor-pointer hover:scale-105"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img 
@@ -88,16 +88,16 @@ const Portfolio = () => {
               </div>
               
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <div className="flex items-center gap-2 mb-2">
                     {[...Array(item.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-accent" fill="currentColor" />
+                      <Star key={i} className="w-4 h-4 text-primary" fill="currentColor" />
                     ))}
                   </div>
-                  <h3 className="text-lg font-semibold text-accent mb-1">{item.title}</h3>
-                  <p className="text-foreground/80 text-sm mb-3">{item.clients}</p>
-                  <Button variant="sparkle" size="sm" className="w-full">
+                  <h3 className="text-lg font-semibold text-primary mb-1">{item.title}</h3>
+                  <p className="text-foreground/70 text-sm mb-3">{item.clients}</p>
+                  <Button variant="elegant" size="sm" className="w-full">
                     <Eye className="w-4 h-4 mr-2" />
                     View Details
                   </Button>
@@ -105,7 +105,7 @@ const Portfolio = () => {
               </div>
               
               {/* Category Badge */}
-              <Badge className="absolute top-3 left-3 bg-accent/90 text-primary">
+              <Badge className="absolute top-3 left-3 bg-primary/90 text-white">
                 {item.category}
               </Badge>
             </div>
@@ -113,7 +113,7 @@ const Portfolio = () => {
         </div>
         
         <div className="text-center">
-          <Button variant="luxury" size="lg" className="shadow-glow">
+          <Button variant="luxury" size="lg" className="shadow-glow hover:scale-105 transition-all">
             <Sparkles className="w-5 h-5 mr-2" />
             View More Designs
           </Button>

@@ -9,17 +9,18 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-luxury",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft transition-smooth",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border-2 border-primary/20 bg-background text-primary hover:bg-primary hover:text-primary-foreground shadow-soft transition-smooth",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        luxury: "bg-gradient-maroon text-accent hover:shadow-glow border border-accent/20 font-semibold tracking-wide",
-        sparkle: "bg-accent text-primary hover:bg-accent/90 shadow-sparkle font-medium",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-soft",
+        ghost: "hover:bg-primary/10 hover:text-primary text-foreground transition-smooth", 
+        link: "text-primary underline-offset-4 hover:underline transition-smooth",
+        luxury: "bg-gradient-maroon text-white shadow-luxury hover:shadow-glow border border-primary/20 font-semibold tracking-wide transition-luxury",
+        sparkle: "bg-gradient-card text-primary border-2 border-primary/20 hover:border-primary/40 hover:shadow-elegant font-medium transition-luxury",
+        elegant: "bg-white text-primary border-2 border-primary/30 hover:bg-primary hover:text-white shadow-elegant transition-luxury",
       },
       size: {
         default: "h-10 px-4 py-2",
