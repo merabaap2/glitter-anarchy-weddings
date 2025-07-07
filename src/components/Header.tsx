@@ -6,9 +6,11 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-primary/10 shadow-soft">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center floating">
-            <Crown className="w-8 h-8 text-primary" />
-          </div>
+          <img 
+            src="/lovable-uploads/f0822878-6968-4007-be88-cbe64e5caf58.png" 
+            alt="Wishupon Logo" 
+            className="w-12 h-12 object-contain floating"
+          />
           <h1 className="text-2xl font-bold text-foreground tracking-wide sparkle-text">
             Wishupon
           </h1>
