@@ -1,12 +1,47 @@
 import { Button } from "@/components/ui/button";
 import { Star, Sparkles, Heart, Crown } from "lucide-react";
-import heroImage from "@/assets/hero-wedding.jpg";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const heroImages = [
+    "https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&h=1080&fit=crop", // Royal wedding
+    "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=1920&h=1080&fit=crop", // Indian wedding ceremony
+    "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1920&h=1080&fit=crop", // Haldi ceremony
+    "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1920&h=1080&fit=crop", // Wedding decorations
+    "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1920&h=1080&fit=crop", // Reception setup
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 6000); // 6 second transitions
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
-      {/* Clean Background with Subtle Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-luxury-blush/20 to-luxury-cream/40" />
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Slideshow */}
+      <div className="absolute inset-0">
+        {heroImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <img 
+              src={image} 
+              alt={`Wedding slideshow ${index + 1}`}
+              className="w-full h-full object-cover animate-[scale_6s_ease-in-out_infinite_alternate]"
+            />
+          </div>
+        ))}
+        {/* Elegant Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/85 via-luxury-blush/40 to-luxury-cream/60" />
+      </div>
       
       {/* Floating Sparkle Effects */}
       <div className="absolute inset-0 pointer-events-none">

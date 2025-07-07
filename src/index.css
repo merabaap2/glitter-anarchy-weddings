@@ -159,6 +159,11 @@ All colors MUST be HSL.
     50% { transform: translateY(-10px); }
   }
   
+  @keyframes scale {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
   .fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
   }

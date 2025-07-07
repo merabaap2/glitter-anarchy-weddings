@@ -1,4 +1,4 @@
-import { Heart, Sparkles, Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
+import { Heart, Sparkles, Phone, Mail, MapPin, Facebook, Instagram, Twitter, Crown } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -7,15 +7,14 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="relative">
-                <Heart className="w-8 h-8 text-accent" fill="currentColor" />
-                <Sparkles className="w-4 h-4 text-accent absolute -top-1 -right-1" />
+            <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
+                <Crown className="w-6 h-6 text-accent" />
               </div>
               <h3 className="text-2xl font-bold text-foreground tracking-wide">
                 Wishupon
               </h3>
-            </div>
+            </a>
             <p className="text-foreground/70 leading-relaxed">
               Turning your special moments into unforgettable memories. We specialize in creating magical experiences for weddings, birthdays, and corporate events.
             </p>
